@@ -1,15 +1,7 @@
 
 use TrimcoRetail
 go
-ALTER Procedure SpPurchaseTransDeDup
-		AS
-BEGIN
-					--Made used of global temp table for easy collaboration
-		SET NOCOUNT ON  
-			BEGIN TRY  ---this is to monitor for errors and capture errors if any exist
-
-				BEGIN TRANSACTION -- this allows for easy rollback of data if error is encountered
-				-----Data Cleaning and Standadization
+		-----Data Cleaning and Standadization
 
 				-----Created a Global TempTable to work on inother not to make direct immediate changes on the DB ,
 				---- Modified the customer Address table;this temptable worked as my main table in this project.
